@@ -29,7 +29,8 @@ class ListController extends Controller
      */
     public function create()
     {
-        return view('app.content.create-list');
+        $user = Auth::user();
+        return view('app.content.create-list', ['user' => $user]);
     }
 
     /**

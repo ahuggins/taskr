@@ -36,7 +36,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form> --}}
             <ul class="nav navbar-nav navbar-right">
-                @if ($user = ['name' => 'Andy'])
+                @if ($user)
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Lists <span class="caret"></span>
