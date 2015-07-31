@@ -41,7 +41,8 @@ class UserController extends Controller
     	if (Auth::attempt($data)) {
     		$user = User::where('email', $data['email'])->first();
     		Auth::login($user);
+            return redirect('/list');
     	} 
-    	return redirect('/list');
+    	return redirect('/');
     }
 }
