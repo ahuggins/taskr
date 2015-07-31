@@ -24,7 +24,7 @@ class UserController extends Controller
 
     	$user = User::create($data);
 		Auth::login($user, true);
-		return redirect('/');
+		return redirect('/list');
     	
     }
 
