@@ -16,6 +16,7 @@ Route::resource('list', 'ListController');
 Route::get('sign-up', function() {
 	return view('app.content.signup');
 });
+Route::get('sign-in', 'UserController@login');
 Route::post('login', 'UserController@attempt');
 Route::post('sign-up', 'UserController@create');
 Route::get('logout', 'UserController@logout');

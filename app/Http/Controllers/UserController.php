@@ -42,7 +42,13 @@ class UserController extends Controller
     		$user = User::where('email', $data['email'])->first();
     		Auth::login($user);
             return redirect('/list');
-    	} 
-    	return redirect('/');
+    	}
+        
+    	return redirect('/sign-in')->withErrors(['Login Failed. Make sure password and email are correct.']);
+    }
+
+    public function login()
+    {
+        return view('app.content.signin');
     }
 }

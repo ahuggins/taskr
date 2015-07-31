@@ -62,7 +62,7 @@
                         <a href="/sign-up">Sign Up</a>
                     </li>
                     <li>
-                        <a href="/sign-in" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Sign In <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu">
