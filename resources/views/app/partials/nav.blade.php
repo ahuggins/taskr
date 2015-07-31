@@ -36,8 +36,27 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form> --}}
             <ul class="nav navbar-nav navbar-right">
-                @if ($user = Auth::user())
-                    
+                @if ($user = ['name' => 'Andy'])
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Lists <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            @include('app.partials.navLists')
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/list/create">Create List</a></li>
+                            <li><a href="/list">Manage Lists</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        {{ $user->name }} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </li>
                 @else
                     <li>
                         <a href="/sign-up">Sign Up</a>
