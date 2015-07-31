@@ -45,8 +45,8 @@ class ListController extends Controller
         $data['description'] = $request->get('description');
         $data['user_id'] = Auth::user()->id;
 
-        \App\ListModel::create($data);
-        return redirect('/list');
+        $list = \App\ListModel::create($data);
+        return redirect('/list/' . $list->id);
     }
 
     /**
