@@ -1,0 +1,30 @@
+.navbar-custom {
+	background: $accent1;
+	color: #fff;
+	border-radius: 0;
+	border: 1px solid #eee;
+	border-color: $highlight;
+
+	a {
+		color: #fff;
+	}
+
+	
+	.nav>li>a:hover, 
+	.nav>li>a:focus, 
+	.nav>li>a:active, 
+	.nav>li>a:visited {
+	    text-decoration: none;
+	    background-color: $highlight;
+	    color: #333;
+	}
+}
+
+.navbar-toggle {
+	background: $primary;
+	border: 1px solid $highlight;
+
+	.icon-bar {
+		background: $highlight;
+	}
+}

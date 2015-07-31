@@ -1,0 +1,10 @@
+.btn.btn-custom {
+	background: $accent1;
+	color: #fff;
+
+	&:hover {
+		background: $primary;
+		color: #eee;
+	}
+}
+

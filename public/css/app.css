@@ -1,0 +1,46 @@
+body {
+  font-family: Lato; }
+
+a {
+  color: #EC8318; }
+
+.navbar-custom {
+  background: #F59122;
+  color: #fff;
+  border-radius: 0;
+  border: 1px solid #eee;
+  border-color: #FFC35C; }
+  .navbar-custom a {
+    color: #fff; }
+  .navbar-custom .nav > li > a:hover,
+  .navbar-custom .nav > li > a:focus,
+  .navbar-custom .nav > li > a:active,
+  .navbar-custom .nav > li > a:visited {
+    text-decoration: none;
+    background-color: #FFC35C;
+    color: #333; }
+
+.navbar-toggle {
+  background: #EC8318;
+  border: 1px solid #FFC35C; }
+  .navbar-toggle .icon-bar {
+    background: #FFC35C; }
+
+.btn.btn-custom {
+  background: #F59122;
+  color: #fff; }
+  .btn.btn-custom:hover {
+    background: #EC8318;
+    color: #eee; }
+
+.login-form {
+  padding: 17px; }
+
+.tasks .completed {
+  text-decoration: line-through;
+  color: #cdcdcd;
+  background: #eee; }
+.tasks button.icon {
+  border: 0;
+  background: none;
+  color: #EC8318; }

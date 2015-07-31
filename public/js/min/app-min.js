@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".tasks .complete").click(function(){$(this).parent().parent().toggleClass("completed")}),$(".add-task").keypress(function(t){if(13===t.which){var a=$(".add-task input"),e=a.val();$(a).val("").focus(),$(".tasks").append(e)}})});
