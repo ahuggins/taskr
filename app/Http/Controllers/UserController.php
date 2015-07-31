@@ -23,7 +23,7 @@ class UserController extends Controller
     	$data['password'] = bcrypt($request->get('password'));
 
     	$user = User::create($data);
-		Auth::login($user);
+		Auth::login($user, true);
 		return redirect('/');
     	
     }
