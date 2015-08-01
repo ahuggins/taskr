@@ -19,6 +19,8 @@ a {
     text-decoration: none;
     background-color: #FFC35C;
     color: #333; }
+  .navbar-custom .nav .open > a {
+    background: #FFC35C; }
 
 .navbar-toggle {
   background: #EC8318;

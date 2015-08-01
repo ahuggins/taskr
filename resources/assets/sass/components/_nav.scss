@@ -18,6 +18,10 @@
 	    background-color: $highlight;
 	    color: #333;
 	}
+
+	.nav .open>a {
+		background: $highlight;
+	}
 }
 
 .navbar-toggle {
