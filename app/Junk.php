@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Junk extends Model
 {
-    // Test
+    // Tes
 }
