@@ -8,16 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
 
-
-class ListController extends Controller
+class TeamController extends Controller
 {
-
-    public function __construct() {
-        $this->middleware('auth');
-        if ($x > ) {
-            
-        }
-    }
     /**
      * Display a listing of the resource.
      *
@@ -25,8 +17,15 @@ class ListController extends Controller
      */
     public function index()
     {
-        $lists = \App\ListModel::where('user_id', Auth::user()->id)->get();
-        return view('app.content.lists', ['lists' => $lists]);
+        $owned = \App\Team::where('user_id', Auth::user()->id)
+                            ->get();
+        
+        $member = \App\TeamUser::where('team_user.user_id', Auth::user()->id)
+                            ->join('teams', 'teams.id', '=', 'team_user.team_id')
+                            ->whereNotIn('teams.id', $owned->lists('id'))
+                            ->get();
+
+        return view('app.content.teams', ['owned' => $owned, 'member' => $member]);
     }
 
     /**
@@ -36,8 +35,7 @@ class ListController extends Controller
      */
     public function create()
     {
-        $user = Auth::user();
-        return view('app.content.create-list', ['user' => $user]);
+        //
     }
 
     /**
@@ -47,13 +45,8 @@ class ListController extends Controller
      * @return Response
      */
     public function store(Request $request)
-    {   
-        $data['name'] = $request->get('name');
-        $data['description'] = $request->get('description');
-        $data['user_id'] = Auth::user()->id;
-
-        $list = \App\ListModel::create($data);
-        return redirect('/list/' . $list->id);
+    {
+        //
     }
 
     /**
@@ -64,13 +57,8 @@ class ListController extends Controller
      */
     public function show($id)
     {
-        $list = \App\ListModel::where('id', $id)->first();
-
-        if (Auth::user()->id == $list->user_id) {
-            return view('app.content.list', ['list' => $list]);
-        }
-
-        return redirect('/list')->withErrors('You do not have permission to access list.');
+        $team = \App\Team::find($id)->members;
+        return view('app.content.teamMembers', ['team' => $team]);
     }
 
     /**
@@ -104,11 +92,6 @@ class ListController extends Controller
      */
     public function destroy($id)
     {
-        $list = \App\ListModel::find($id);
-        if (Auth::user()->id == $list->user_id) {
-            $list->destroy($id);
-            return redirect('/list');
-        }
-        return redirect('/list')->withErrors('You do not have permission to delete that list.');
+        //
     }
 }

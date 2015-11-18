@@ -53,6 +53,9 @@
                         {{ $user->name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
+                            <li>
+                                <a href="/teams">Teams</a>
+                            </li>
                             <li role="separator" class="divider"></li>
                             <li><a href="/logout">Logout</a></li>
                         </ul>

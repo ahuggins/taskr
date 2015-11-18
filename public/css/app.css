@@ -35,6 +35,11 @@ a {
     background: #EC8318;
     color: #eee; }
 
+button.icon {
+  border: 0;
+  background: none;
+  color: #EC8318; }
+
 .login-form {
   padding: 17px; }
 
@@ -42,7 +47,3 @@ a {
   text-decoration: line-through;
   color: #cdcdcd;
   background: #eee; }
-.tasks button.icon {
-  border: 0;
-  background: none;
-  color: #EC8318; }

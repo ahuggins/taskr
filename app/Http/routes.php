@@ -20,5 +20,6 @@ Route::get('sign-in', 'UserController@login');
 Route::post('login', 'UserController@attempt');
 Route::post('sign-up', 'UserController@create');
 Route::get('logout', 'UserController@logout');
+Route::resource('teams', 'TeamController');
 
 Route::controller('api', 'TaskController');
