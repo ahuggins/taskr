@@ -14,9 +14,7 @@ class ListController extends Controller
 
     public function __construct() {
         $this->middleware('auth');
-        if ($x > ) {
-            
-        }
+        
     }
     /**
      * Display a listing of the resource.
